@@ -1,0 +1,91 @@
+---
+layout: base.njk
+---
+<section class="pt-28 pb-16 bg-surface">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="inline-block px-4 py-1.5 bg-primary-container/10 text-primary-container text-xs font-bold tracking-widest uppercase rounded-full mb-6">{{ serviceLabel }}</div>
+    <h1 class="font-headline text-4xl md:text-6xl text-primary leading-tight mb-6">{{ heroHeadline }}</h1>
+    <p class="text-on-surface-variant text-lg md:text-xl max-w-3xl leading-relaxed">{{ heroSubheadline }}</p>
+  </div>
+</section>
+
+{% if problems %}
+<section class="py-20 bg-surface-container-low">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="font-headline text-3xl md:text-4xl text-primary mb-12">Does This Sound Familiar?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {% for problem in problems %}
+      <div class="bg-surface-container-lowest p-10 rounded-xl editorial-shadow">
+        <h3 class="font-headline text-xl text-primary mb-3">{{ problem.title }}</h3>
+        <p class="text-on-surface-variant leading-relaxed">{{ problem.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="py-20 bg-surface">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="font-headline text-3xl md:text-4xl text-primary mb-8">{{ solutionHeadline }}</h2>
+    <div class="text-on-surface-variant text-lg leading-relaxed space-y-6 max-w-3xl">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>
+
+{% if servicesList %}
+<section class="py-20 bg-surface-container-low">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="font-headline text-3xl text-primary mb-12">What We Handle</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {% for item in servicesList %}
+      <div class="flex items-center gap-4 p-5 bg-surface-container-lowest rounded-lg editorial-shadow">
+        <span class="material-symbols-outlined text-primary-container text-xl">check_circle</span>
+        <span class="text-on-surface text-sm font-medium">{{ item }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="py-20 bg-surface">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="font-headline text-3xl text-primary mb-8">Your Attorney</h2>
+    <div class="bg-surface-container-lowest p-8 rounded-xl editorial-shadow inline-flex items-center gap-6">
+      <span class="material-symbols-outlined text-primary text-3xl">person</span>
+      <div>
+        <h3 class="font-headline text-xl text-primary">{{ attorney }}</h3>
+        <p class="text-on-surface-variant text-sm">{{ attorneyTitle }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if faqs %}
+<section class="py-20 bg-surface-container-low">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="font-headline text-3xl text-primary mb-12">Frequently Asked Questions</h2>
+    <div class="space-y-4 max-w-3xl">
+      {% for faq in faqs %}
+      <details class="group bg-surface-container-lowest p-6 rounded-xl editorial-shadow cursor-pointer">
+        <summary class="flex justify-between items-center font-headline text-lg text-primary font-medium">
+          {{ faq.q }}
+          <span class="material-symbols-outlined text-outline group-open:rotate-45 transition-transform">add</span>
+        </summary>
+        <p class="mt-4 text-on-surface-variant leading-relaxed">{{ faq.a }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="py-24 bg-primary text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="font-headline text-4xl md:text-5xl mb-6 leading-tight">{{ ctaHeadline | default("Ready to Take Action?") }}</h2>
+    <p class="text-white/70 text-lg mb-10">Schedule a free, confidential consultation to discuss your case.</p>
+    <a href="/contact/" class="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all">Free Consultation</a>
+  </div>
+</section>

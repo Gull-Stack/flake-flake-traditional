@@ -1,0 +1,54 @@
+{
+  "name": "Flake & Flake Attorneys at Law",
+  "url": "https://flakeandflake.com",
+  "type": "LegalService",
+  "founded": "2025",
+  "founders": ["Jordan Flake", "Troy Flake"],
+  "location": {
+    "street": "8905 S. Pecos Rd., Ste. 23B",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89074",
+    "country": "US"
+  },
+  "phone": "(702) 818-1800",
+  "fax": "(702) 973-1999",
+  "emails": ["jordan@flakeandflake.com", "troy@flakeandflake.com"],
+  "jurisdiction": "Nevada",
+  "serviceArea": ["Henderson", "Las Vegas", "Southern Nevada"],
+  "practiceAreas": [
+    "Estate Planning",
+    "Probate",
+    "FTCA / VA Medical Malpractice",
+    "Personal Injury",
+    "Medical Malpractice",
+    "Business Law",
+    "Contract Law"
+  ],
+  "attorneys": [
+    {
+      "name": "Jordan Flake",
+      "title": "Founding Partner",
+      "focus": "Estate Planning & Probate",
+      "education": "University of Michigan Law School",
+      "experience": "Nearly 20 years"
+    },
+    {
+      "name": "Troy Flake",
+      "title": "Founding Partner",
+      "focus": "Litigation & Federal Practice",
+      "experience": "10+ years",
+      "priorRoles": ["Assistant United States Attorney", "SEC Trial Attorney"]
+    }
+  ],
+  "differentiators": [
+    "Brothers with complementary practice areas under one roof",
+    "Former federal prosecutor (AUSA) on staff",
+    "Former SEC Trial Attorney on staff",
+    "Free initial consultations",
+    "Contingency fees for injury cases — no upfront cost",
+    "Boutique firm attention with big-firm litigation capability"
+  ],
+  "freeConsultation": true,
+  "contingencyFees": true
+}
